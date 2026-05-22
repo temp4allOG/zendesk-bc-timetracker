@@ -1,0 +1,3 @@
+import React from 'react';import{formatOption}from'../utils/helpers.js';
+export function ClientSelector({customers,value,onChange}){return <label>Client<select value={value} onChange={e=>onChange(e.target.value)}><option value="">Select client</option>{customers.map(c=><option key={c.id||c.number} value={c.id}>{formatOption(c.number,c.displayName||c.name)}</option>)}</select></label>}
+export function ProjectSelector({jobs,value,onChange}){return <label>Project<select value={value} onChange={e=>onChange(e.target.value)}><option value="">Select project</option>{jobs.map(j=><option key={j.id||j.number} value={j.id}>{formatOption(j.number,j.displayName||j.description)}</option>)}</select></label>}
